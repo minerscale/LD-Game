@@ -2,3 +2,5 @@
 My game for ludum dare. Not sure what it will be at the moment :p
 
 This is a paragraph that will test git so it works for the jam
+
+This is a paragraph testing git going the other way
