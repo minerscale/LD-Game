@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/GUI.gd" type="Script" id=1]
 
-[node name="Control" type="Control"]
+[node name="GUI" type="Control"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true

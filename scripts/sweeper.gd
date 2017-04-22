@@ -12,6 +12,6 @@ func _ready():
 	set_fixed_process(true)
 
 func _fixed_process(delta):
-	rot = rot + (1 * delta)
-	set_rot(rot)
+	rot = rot + (10 * delta)
+	set_rotd(rot)
 	

@@ -42,7 +42,7 @@ drag_margin/top = 0.2
 drag_margin/right = 0.2
 drag_margin/bottom = 0.2
 
-[node name="Control" parent="Camera2D" instance=ExtResource( 4 )]
+[node name="GUI" parent="Camera2D" instance=ExtResource( 4 )]
 
 margin/left = -512.0
 margin/top = -300.0

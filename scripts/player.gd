@@ -18,8 +18,13 @@ func _fixed_process(delta):
 	if (Input.is_action_pressed("jump") && fuel > 0):
 		yvel = -60000*delta
 		fuel -= 1 * delta
+		get_node("Sprite/Sprite").set_hidden(false)
 	else:
 		yvel = 0
 		if (fuel < 1):
 			fuel += 0.5 * delta
+		get_node("Sprite/Sprite").set_hidden(true)
+	
 	set_applied_force(Vector2(xvel,yvel))
+	if(get_pos().y >= 500):
+		get_node("/root/globals").setScene("res://scenes/DeathScreen.tscn")
