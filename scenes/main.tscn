@@ -1,5 +1,20 @@
-[gd_scene format=1]
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Platform.tscn" type="PackedScene" id=2]
 
 [node name="Node" type="Node"]
+
+[node name="RigidBody2D" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 334.745, 29.8755 )
+gravity_scale = 4.0
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="StaticBody2D" parent="Node2D" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 324.008, 313.222 )
+transform/scale = Vector2( 4, 4 )
 
 
