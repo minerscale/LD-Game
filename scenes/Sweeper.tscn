@@ -14,7 +14,7 @@ transform/pos = Vector2( 0, -975 )
 [node name="KinematicBody2D1" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 975, -2.05878 )
-transform/rot = 90.0
+transform/rot = -90.0
 
 [node name="KinematicBody2D5" parent="." instance=ExtResource( 2 )]
 
@@ -24,6 +24,7 @@ transform/rot = 90.0
 [node name="KinematicBody2D2" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 0, 975 )
+transform/rot = 180.0
 
 [node name="KinematicBody2D 2" parent="." instance=ExtResource( 2 )]
 
@@ -32,7 +33,7 @@ transform/pos = Vector2( 0, -1100 )
 [node name="KinematicBody2D3" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 1100, 0 )
-transform/rot = 90.0
+transform/rot = -90.0
 
 [node name="KinematicBody2D5 2" parent="." instance=ExtResource( 2 )]
 
@@ -42,5 +43,6 @@ transform/rot = 90.0
 [node name="KinematicBody2D4" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 0, 1100 )
+transform/rot = 180.0
 
 

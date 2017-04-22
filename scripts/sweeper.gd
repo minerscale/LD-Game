@@ -14,6 +14,6 @@ func _ready():
 
 func _fixed_process(delta):
 	speed = speed + 1 * delta
-	rot = rot + (speed * delta)
+	rot = rot + -(speed * delta)
 	set_rotd(rot)
 	

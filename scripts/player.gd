@@ -12,24 +12,25 @@ func _ready():
 
 func _fixed_process(delta):
 	if (Input.is_action_pressed("move_left")):
-		xvel = -40000*delta
+		xvel = -100000*delta
 	elif (Input.is_action_pressed("move_right")):
-		xvel = 40000*delta
+		xvel = 100000*delta
 	else:
 		xvel = 0
 	if (Input.is_action_pressed("jump") && fuel > 0):
-		yvel = -60000*delta
-		fuel -= 1 * delta
-		get_node("Sprite/Sprite").set_hidden(false)
+		yvel = -40000*delta
+		fuel -= 0.3 * delta
+		get_node("Sprite/AnimatedSprite").set_hidden(false)
 	else:
 		yvel = 0
-		if (fuel < 1):
-			fuel += 0.5 * delta
-		get_node("Sprite/Sprite").set_hidden(true)
+		if (fuel < 1 && Input.is_action_pressed("jump") == false):
+			fuel += 0.3 * delta
+		get_node("Sprite/AnimatedSprite").set_hidden(true)
 	
-	set_applied_force(Vector2(xvel,yvel))
-	if(get_pos().y >= 500):
+	set_applied_torque(xvel)
+	set_applied_force(Vector2(yvel*(sin(get_rot())),yvel*(cos(get_rot()))))
+	
+	if(get_pos().y >= 470 || get_pos().y <= -470 || get_pos().x >= 800 || get_pos().x <= -800):
 		Globals.set("TIME",time)
 		get_node("/root/globals").setScene("res://scenes/DeathScreen.tscn")
-	get_global_pos()
 	time = time + delta
