@@ -1,6 +1,7 @@
 extends Node2D
 
-var rot = 0.0
+var rot = 45
+var speed = 0
 
 # class member variables go here, for example:
 # var a = 2
@@ -12,6 +13,7 @@ func _ready():
 	set_fixed_process(true)
 
 func _fixed_process(delta):
-	rot = rot + (10 * delta)
+	speed = speed + 1 * delta
+	rot = rot + (speed * delta)
 	set_rotd(rot)
 	

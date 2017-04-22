@@ -3,6 +3,8 @@ extends RigidBody2D
 var xvel = 0
 var yvel = 0
 
+var time = 0
+
 var fuel = 1
 
 func _ready():
@@ -27,4 +29,7 @@ func _fixed_process(delta):
 	
 	set_applied_force(Vector2(xvel,yvel))
 	if(get_pos().y >= 500):
+		Globals.set("TIME",time)
 		get_node("/root/globals").setScene("res://scenes/DeathScreen.tscn")
+	get_global_pos()
+	time = time + delta

@@ -1,21 +1,23 @@
-[gd_scene format=1]
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://scripts/DeathScreen.gd" type="Script" id=1]
 
 [node name="Node" type="Node"]
 
 [node name="Label" type="Label" parent="."]
 
-rect/scale = Vector2( 4, 4 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 430.0
-margin/top = 259.0
-margin/right = 476.0
-margin/bottom = 273.0
-text = "I'm gay"
+margin/left = 420.0
+margin/top = 287.0
+margin/right = 662.0
+margin/bottom = 301.0
+text = "You suck! you only lasted 10 seconds!"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script/script = ExtResource( 1 )
 
 
