@@ -50,7 +50,6 @@ transform/pos = Vector2( 0, 17 )
 transform/rot = -90.0
 frames = ExtResource( 3 )
 animation = "default"
-frame = 2
 playing = true
 
 
