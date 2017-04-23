@@ -1,6 +1,6 @@
 extends Node2D
 
-var rot = 45
+var rot = 0
 var speed = 0
 
 # class member variables go here, for example:

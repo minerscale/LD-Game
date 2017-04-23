@@ -31,6 +31,6 @@ func _fixed_process(delta):
 	set_applied_force(Vector2(yvel*(sin(get_rot())),yvel*(cos(get_rot()))))
 	
 	if(get_pos().y >= 470 || get_pos().y <= -470 || get_pos().x >= 800 || get_pos().x <= -800):
-		Globals.set("TIME",time)
 		get_node("/root/globals").setScene("res://scenes/DeathScreen.tscn")
 	time = time + delta
+	Globals.set("TIME",time)
